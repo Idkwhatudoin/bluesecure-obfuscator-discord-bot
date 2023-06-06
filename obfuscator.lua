@@ -142,12 +142,12 @@ scriptContent = [[
         end
         return false
     end
-]] .. "getfenv().lelBallz = false; function loadBlueSecSmellyBallz() if L == 'This file was obfuscated with BlueSecure 1.3 | https://discord.gg/k9Vp4hNfF2' and getfenv().ProtectedByBlueSecure == true then " .. scriptContent .. [[ getfenv().ProtectedByBlueSecure = false
+]] .. "getfenv().lelBallz = false; function loadBlueSecSmellyBallz() if L == 'secured by LuaV' and getfenv().FuckSkids == true then " .. scriptContent .. [[ getfenv().FuckSkids = false
  else
     while true do print('SUSSY AMONG US BALLZ') end
 ]] .. " end end loadBlueSecSmellyBallz();"
  else
-    scriptContent = "getfenv().lelBallz = false; function loadBlueSecSmellyBallz() if L == 'This file was obfuscated with BlueSecure 1.3 | https://discord.gg/k9Vp4hNfF2' and getfenv().ProtectedByBlueSecure == true then " .. scriptContent .. [[ getfenv().ProtectedByBlueSecure = false
+    scriptContent = "getfenv().lelBallz = false; function loadBlueSecSmellyBallz() if L == 'secured by LuaV' and getfenv().FuckSkids == true then " .. scriptContent .. [[ getfenv().FuckSkids = false
  else
     while true do print('SUSSY AMONG US BALLZ') end
 ]] .. " end end loadBlueSecSmellyBallz();"
@@ -342,17 +342,17 @@ newScript = newScript .. " end)({},getfenv,table.remove)"
 
 local algorithm = tostring([[ local ]] .. __l_I_llIX .. [[ = tonumber(']] .. ToBytecode(tostring(keyO)) .. [[') local ]] .. __l_I_llIY .. [[= tonumber(']] .. ToBytecode(tostring(keyT)) .. [[') local inv256 function __l_I_llI(str) local K, F =]] .. __l_I_llIX .. [[, 16384 + ]] .. __l_I_llIY .. [[ return (str:gsub('%x%x', function(c) local L = K % 274877906944 local H = (K - L) / 274877906944 local M = H % 128 c = tonumber(c, 16) local m = (c + (H - M) / 128) * (2*M + 1) % 256 K = L * F + H + c + m return string.char(m) end )) end; __i_l_lli=loadstring; if loadstring ~= print and loadstring ~= warn and loadstring ~= setclipboard and loadstring ~= writefile then else while true do end end]])
 local Encoded = EncodeBinary(algorithm)
-local finalAlgorithm = [[) L='This file was obfuscated with BlueSecure 1.3 | https://discord.gg/k9Vp4hNfF2'; loadstring("\32\10")() local __IllIIIIl_IllI = ]].."table.concat({"..Encoded.."})"..[[ function _I_llIlIlIIl(str) local function _IIllIllI_to_string(_IlI) return string.char(tonumber(_IlI, 2));end;return (str:gsub("(".. ("[01]"):rep(8) .. ")", _IIllIllI_to_string));end;local _IIllIllI = __IllIIIIl_IllI _llIIl_IllI = _I_llIlIlIIl(_IIllIllI);loadstring("\32\10")();loadstring(_llIIl_IllI)();]]
+local finalAlgorithm = [[) L='secured by LuaV'; loadstring("\32\10")() local __IllIIIIl_IllI = ]].."table.concat({"..Encoded.."})"..[[ function _I_llIlIlIIl(str) local function _IIllIllI_to_string(_IlI) return string.char(tonumber(_IlI, 2));end;return (str:gsub("(".. ("[01]"):rep(8) .. ")", _IIllIllI_to_string));end;local _IIllIllI = __IllIIIIl_IllI _llIIl_IllI = _I_llIlIlIIl(_IIllIllI);loadstring("\32\10")();loadstring(_llIIl_IllI)();]]
 
 newScript = newScript:gsub('%)', finalAlgorithm:gsub('%%', '%%%%'), 1)
 
 newScript = [[
---Protected by blueSecure(1.3)
-getfenv().ProtectedByBlueSecure = true
+--Secured by LuaV Obfuscator v1.0, Fuck you skidder
+getfenv().FuckSkids = true
 ]] .. newScript--.. addEnc
 --Writing final output
 Thread = io.open("output.lua", "w")
 Thread:write(newScript)
 Thread:close()
 --Finished
-print("Sucessfully obfuscated your script!")
+print("Sucessfully obfuscated a script!")
